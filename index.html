@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Bingo For Millenials</title>
+    </head>
+    <body>
+        <h1>Bingo For Millenials</h1>
+        <form class="" id="join-form">
+            <label for="room-number">bingoformillenials.app/</label><input id="room-number" type="text" name="" value="" placeholder="room number">
+            <button type="submit" name="button">Join Room</button>
+        </form>
+        <script type="text/javascript">
+            document.getElementById("join-form").onsubmit = (e) => {
+                e.preventDefault();
+                console.log(document.getElementById("room-number").value)
+                // todo: refactor this to get rid of snarky redirect inputs (e.g. ////adsf)
+                window.location = document.getElementById("room-number").value
+            }
+        </script>
+    </body>
+</html>
