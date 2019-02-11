@@ -6,6 +6,7 @@
     "author": "Ken Hoff <ken@hoff.tech>",
     "license": "MIT",
     "scripts": {
+        "dev": "concurrently -p \"{name}\" -n \"server,frontend\" \"nodemon server/server.js\" \"webpack-cli -w\"",
         "postinstall": "webpack"
     },
     "dependencies": {
