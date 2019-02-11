@@ -1,7 +1,7 @@
 {
     "name": "bingo-for-millenials",
     "version": "0.0.1",
-    "main": "server.js",
+    "main": "/server/server.js",
     "repository": "git@github.com:kenhoff/bingo-for-millenials.git",
     "author": "Ken Hoff <ken@hoff.tech>",
     "license": "MIT",
