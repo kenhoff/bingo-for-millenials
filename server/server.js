@@ -13,20 +13,20 @@ let games = {};
 app.use("/", express.static("build"));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "..", "static", "index.html"));
 });
 
 app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "game.html"));
+    res.sendFile(path.join(__dirname, "..", "static", "game.html"));
 });
 
 io.on("connection", (socket) => {
     console.log("user connected");
     socket.on("join-room", (roomID) => {
-        socket.join(roomID)
+        socket.join(roomID);
         // generate a name for the user
 
-        let userName = names[Math.floor(Math.random() * names.length)]
+        let userName = names[Math.floor(Math.random() * names.length)];
 
         // add socket / user to room
         if (!(roomID in games)) {
